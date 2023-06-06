@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <script type="javascript" src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></link>
+    <script type="javascript" src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&amp;amp;amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/magnific-popup.css"/>
+    <link rel="stylesheet" href="css/aos.css"/>
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css"/>
+    <link rel="stylesheet" href="css/jquery.timepicker.css"/>
+    <link rel="stylesheet" href="css/flaticon.css"/>
+    <link rel="stylesheet" href="css/icomoon.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <title>Car Rental</title>
+    <h:outputStylesheet library="javax.faces" name="css/bootstrap.min.css" />
+    <style type="text/css">
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</h:head>
+
+<h:body>
+    <div class="container">
+        <h1>Car Rental</h1>
+        <h2>Car Information</h2>
+        <p>Car Name: </p>
+        <p>Car Model:</p>
+        <p>Car Price: </p>
+
+        <h2>User Information</h2>
+        <p>Username: </p>
+
+        <h2>Registration Successful!</h2>
+        <div class="alert alert-success">
+            Your registration is successful. Thank you for booking!
+        </div>
+
+        <h:form>
+            <h:commandButton value="Book Now" styleClass="btn btn-primary" onclick="showPopup()" />
+        </h:form>
+    </div>
+
+    <div id="popup" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Booking Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aaria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Car Name: </p>
+                    <p>Car Model: </p>
+                    <p>Car Price: </p>
+                    <p>Username: </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <h:outputScript library="javax.faces" name="js/jquery.min.js" target="head" />-->
+<!--    <h:outputScript library="javax.faces" name="js/bootstrap.min.js" target="head" />-->
+    <script>
+        function showPopup() {
+            $('#popup').modal('show');
+        }
+    </script>
+
+
+    <script type="javascript" src="js/jquery.min.js"></script>
+    <script type="javascript" src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script type="javascript" src="js/popper.min.js"></script>
+    <script type="javascript" src="js/bootstrap.min.js"></script>
+    <script type="javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="javascript" src="js/jquery.waypoints.min.js"></script>
+    <script type="javascript" src="js/jquery.stellar.min.js"></script>
+    <script type="javascript" src="js/owl.carousel.min.js"></script>
+    <script type="javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="javascript" src="js/aos.js"></script>
+    <script type="javascript" src="js/jquery.animateNumber.min.js"></script>
+    <script type="javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="javascript" src="js/jquery.timepicker.min.js"></script>
+    <script type="javascript" src="js/scrollax.min.js"></script>
+    <script type="javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+    <script type="javascript" src="js/google-map.js"></script>
+    <script type="javascript" src="js/main.js"></script>
+</h:body>
+
+</html>

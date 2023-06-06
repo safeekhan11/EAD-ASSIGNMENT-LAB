@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+><h:head>
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"
+            rel="stylesheet"
+    />
+</h:head>
+<h:body >
+    <div>
+        <center>
+            <h3 class="mt-5">Student Registration form</h3>
+        </center>
+
+    </div>
+    <div class="container mt-5">
+        <h:form>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <h:inputText type="text" value="#{student.stu.fName}" id="form3Example1" class="form-control" />
+                        <label class="form-label" for="form3Example1">First name</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <h:inputText type="text" id="form3Example2" value="#{student.stu.lName}" class="form-control" />
+                        <label class="form-label" for="form3Example2">Last name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- age input -->
+                    <div class="form-outline mb-4">
+                        <h:inputText  id="age" value="#{student.stu.age}" class="form-control" />
+                        <label class="form-label" for="age">Age</label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <h:inputText  id="form3Example6" value="#{student.stu.email}" class="form-control" />
+                        <label class="form-label" for="form3Example6">Email address</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div >
+                <div class="col-lg-6 mb-3" >
+                    <label>Select Gender</label>
+                    <h:selectOneRadio id="console" value="#{student.stu.gender}">
+                        <f:selectItem itemLabel="Male" itemValue="Male"/>
+                        <f:selectItem itemLabel="Female" itemValue="Female"/>
+                    </h:selectOneRadio>
+                </div>
+
+
+            </div>
+            <div class="col-lg-12 mt-2 ">
+
+                <div class="form-outline mb-4">
+                    <h:inputText  id="typeNumber" value="#{student.stu.address}" class="form-control" />
+                    <label class="form-label" for="typeNumber">Address</label>
+                </div>
+
+            </div>
+
+            <!-- Submit button -->
+            <h:commandButton type="submit" action="#{student.register}" value="Register"  class="btn btn-primary btn-block mb-4"></h:commandButton>
+
+
+        </h:form>
+    </div>
+
+    <h:form>
+
+        <div class="title">Create a new account</div>
+        <div class="subtitle">It's free and always will be.</div>
+
+        <h:panelGrid columns="2">
+            <h:inputText id="firstName" placeholder="First Name" styleClass="input-box" required="true" value="#{signupBean.firstName}" />
+            <h:inputText id="surname" placeholder="Surname" styleClass="input-box" required="true" value="#{signupBean.surname}" />
+
+            <h:inputText id="emailOrMobile" placeholder="Mobile Number or Email Address" styleClass="input-box" required="true" value="#{signupBean.emailOrMobile}" />
+
+            <h:inputSecret id="newPassword" placeholder="New Password" styleClass="password-box" required="true" value="#{signupBean.newPassword}" />
+
+            <div class="birthday-label">Birthday</div>
+            <h:panelGroup>
+                <h:selectOneMenu styleClass="input-box" required="true" value="#{signupBean.selectedDay}">
+                    <f:selectItem itemLabel="Day" noSelectionOption="true" />
+                    <f:selectItems value="#{signupBean.days}" />
+                </h:selectOneMenu>
+                <h:selectOneMenu styleClass="input-box" required="true" value="#{signupBean.selectedMonth}">
+                    <f:selectItem itemLabel="Month" noSelectionOption="true" />
+                    <f:selectItems value="#{signupBean.months}" />
+                </h:selectOneMenu>
+                <h:selectOneMenu styleClass="input-box" required="true" value="#{signupBean.selectedYear}">
+                    <f:selectItem itemLabel="Year" noSelectionOption="true" />
+                    <f:selectItems value="#{signupBean.years}" />
+                </h:selectOneMenu>
+                <span class="why-birthday">Why do I need to provide date of birth?</span>
+            </h:panelGroup>
+
+            <div>
+                <h:selectOneRadio value="#{signupBean.gender}" layout="custom">
+                    <f:selectItem itemLabel="Female" itemValue="Female" />
+                    <f:selectItem itemLabel="Male" itemValue="Male" />
+                </h:selectOneRadio>
+            </div>
+        </h:panelGrid>
+
+        <h:commandButton value="Create Account" action="#{signupBean.signup}" styleClass="create-button" />
+    </h:form>
+    <!-- MDB -->
+    <script type="text/javascript"></script>
+
+</h:body>
+</html>
+
